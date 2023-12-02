@@ -20,7 +20,7 @@ Welcome to the TicTacToe Game repository! This interactive web-based TicTacToe g
 
 ## Demo
 
-Include a link to a live demo (if applicable) or screenshots showcasing the gameplay.
+(https://omerbentzi.github.io/TicTacToe/)
 
 ## Technologies Used
 
