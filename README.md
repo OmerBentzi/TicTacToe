@@ -30,7 +30,7 @@ https://omerbentzi.github.io/TicTacToe
 
 ## Setup
 
-No complex setup required! Simply open the `index.html` file in a web browser, and you're ready to play.
+No complex setup required! Simply open the `index.html` file in a web browser or click the Demo link , and you're ready to play .
 
 ## Contribution
 
