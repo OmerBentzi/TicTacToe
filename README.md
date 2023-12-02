@@ -29,9 +29,9 @@ Include a link to a live demo (if applicable) or screenshots showcasing the game
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML Logo" width="20">
+- CSS <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS Logo" width="20">
+- JavaScript <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Logo" width="20">
 
 ## Setup
 
