@@ -1,7 +1,7 @@
 # TicTacToe Game
 
 Welcome to the TicTacToe Game repository! This interactive web-based TicTacToe game is implemented using HTML, CSS, and JavaScript, featuring a set of rules, clear game results, a new game button, and a 30-second move timeout for an exciting and dynamic gaming experience.
-With each move of the player the stopper will reset and start over
+
 
 ## Features
 
@@ -17,7 +17,7 @@ With each move of the player the stopper will reset and start over
 
 1. Clone the repository to your local machine.
 2. Open the `index.html` file in your web browser.
-3. Read the rules, make your moves, and enjoy the game! Don't forget about the 30-second move timeout.
+3. Read the rules, make your moves, and enjoy the game! Don't forget about the 30-second move timeout, With each move of the player the stopper will reset and start over.
 
 ## Demo
 

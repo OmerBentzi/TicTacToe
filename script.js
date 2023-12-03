@@ -284,6 +284,9 @@ let handleRestart = () => {
     document.getElementById("timer").innerHTML = "";
 };
 let show_popup = () => {
+    document.getElementById("popup").hidden = false;
+};
+let close_popup = () => {
     document.getElementById("popup").hidden = true;
 };
 // Event listeners
@@ -291,4 +294,6 @@ document.querySelector('#start').addEventListener('click', handleStart);
 document.querySelector('#playAgain').addEventListener('click', handlePlayAgain);
 document.querySelector('#restart').addEventListener('click', handleRestart);
 document.querySelector('#rules').addEventListener('click',show_popup);
+document.querySelector('#remove').addEventListener('click',close_popup);
+
 
