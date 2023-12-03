@@ -4,7 +4,8 @@ body {
   font-size: 16px;
   caret-color: transparent;
   background-image: url('./img.gif');
-  background-size: 100%;
+  background-size: 80%;
+  background-position-x: 260%;
   margin: 0;
   padding: 0;
 }
