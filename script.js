@@ -12,8 +12,7 @@ let gameActive = true
 let currentPlayer = 'X'
 let gameState = []
 let cols, rows, steps, counter = 0
-let playerSetTimeOut
-let timer = 0
+let timer = 1
 let timerInterval
 let timeLeft = 30
 let stopperInterval
@@ -78,14 +77,22 @@ let handleStart = () => {
     handlePlayerSwitch()
     document.querySelectorAll('.cell')
         .forEach(cell => cell.addEventListener('click', handleClick))
-    setStopper()
     timer = 0
+    timeLeft = 30
     clearInterval(timerInterval)
     timerInterval = setInterval(() => {
         timer += 1
         timeLeft -= 1
         document.getElementById("timer").innerHTML = `Timer : \n ${timer} sec`
         document.getElementById("stopper").innerHTML = `Time Left : \n ${timeLeft} sec`
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval)
+            gameActive = false
+            statusDisplay.innerHTML = winnMessage(currentPlayer === 'X' ? 'O' : 'X')
+            statusDisplay.style.color = '#black'
+            document.getElementById("stopper").innerHTML = "Time Left : \n 0 sec"
+        }
     }, 1000);
 }
 
@@ -181,29 +188,13 @@ let handlePlayerSwitch = () => {
 let isMovesLeft = () => {
     if (counter === cols * rows) {
         statusDisplay.innerHTML = nobodyWinsMessage()
-        clearTimeout(playerSetTimeOut)
         clearInterval(timerInterval)
         gameActive = false
     }
 }
 
-let setStopper = () => {
-    clearTimeout(playerSetTimeOut)
-    timeLeft = 30
-
-    playerSetTimeOut = setTimeout(() => {
-        clearInterval(timerInterval)
-        gameActive = false
-        statusDisplay.innerHTML = winnMessage(currentPlayer === 'X' ? 'O' : 'X')
-        statusDisplay.style.color = '#black'
-        timer += 1
-        document.getElementById("timer").innerHTML = `Timer : \n ${timer} sec`
-        document.getElementById("stopper").innerHTML = "Time Left : \n 0 sec"
-    }, 30000);
-}
-
 let handleClick = (event) => {
-    setStopper()
+    timeLeft = 30
 
     let clickedIndex = event.target.getAttribute('id').split('_');
     let i = +clickedIndex[0]
@@ -215,7 +206,7 @@ let handleClick = (event) => {
     gameState[i][j] = (currentPlayer === 'X') ? 1 : 2
     event.target.innerHTML = currentPlayer
     countField.innerHTML = `${++counter}`
-    
+
     isMovesLeft()
     isWinning(i, j)
 
@@ -230,7 +221,6 @@ let handleClick = (event) => {
 function winnActions(winner) {
     console.log(winner)
 
-    clearTimeout(playerSetTimeOut)
     clearInterval(timerInterval)
     gameActive = false
     statusDisplay.innerHTML = winnMessage(currentPlayer)
@@ -268,7 +258,6 @@ let handleRestart = () => {
     player1.innerHTML = player2.innerHTML = '-'
     startBox.className = 'sidebar'
     playField.removeChild(document.getElementById('container'))
-    clearTimeout(playerSetTimeOut)
     clearInterval(timerInterval)
     document.getElementById("stopper").innerHTML = ""
     document.getElementById("timer").innerHTML = ""
