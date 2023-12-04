@@ -33,6 +33,35 @@ section {
   font-family: 'Press Start 2P', cursive;
   color: #fff;
 }
+section {
+  text-align: center;
+  padding: 80px;
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+}
+
+input[type="text" i],
+input[type="number" i] {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #97141459;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+input[type="text" i]::placeholder,
+input[type="number" i]::placeholder {
+  color: #ffffff;
+}
 
 .hidden {
   display: none;
