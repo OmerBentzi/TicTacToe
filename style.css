@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   caret-color: transparent;
   background-image: url('./img.gif');
-  background-size: 100%;
+  background-size: 80%;
   background-position-x: 260%;
   margin: 0;
   padding: 0;
@@ -97,16 +97,27 @@ section {
   margin: 10px 0;
 }
 
-.popup {
-  height: 40%;
-  width: 45%;
+.instructions {
+  text-align: center;
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
   position: absolute;
-  top: 30%;
-  left:27.5%;
-  z-index: 20;
-  background-color: #9b59b6;
-  
-
-
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.instructions h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2em;
+  margin: 8px 0;
+  line-height: 1.2em;
+}
+#rules {
+  display: none;
+}
+
